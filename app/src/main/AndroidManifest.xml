@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.yado">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="Yado"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MainAppTheme">
+
+        <!-- FireBase Messaging Service -->
+        <service android:name="app.yado.Utils.FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:name="app.yado.view_user_profile"></activity>
+        <activity
+            android:name="app.yado.Activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_API_key" /> <!-- Google Play -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- Facebook Login Code -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="app.yado.Activities.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name="app.yado.Activities.Registration"
+            android:label="@string/title_activity_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="app.yado.Activities.userEmailVerification"
+            android:label="@string/title_activity_user_email_verification" />
+        <activity android:name="app.yado.Activities.reset_password" />
+        <activity android:name="app.yado.Activities.reset_password_done" />
+        <activity
+            android:name="app.yado.Activities.On_Boarding_Page_Activity"
+            android:label="@string/title_activity_on__boarding__page_" />
+        <activity android:name="app.yado.Activities.Home_Activity" />
+        <activity android:name="app.yado.Activities.User_Task_Activity" />
+        <activity android:name="app.yado.Activities.Notification_Activity" />
+        <activity android:name="app.yado.Activities.Messages_Activity" />
+        <activity android:name="app.yado.Activities.User_Profile_Activity" />
+        <activity
+            android:name="app.yado.Activities.Create_Task"
+            android:label="@string/title_activity_create__task" />
+        <activity android:name="app.yado.Activities.Map_Activity" />
+        <activity android:name="app.yado.Activities.App_Setting" />
+        <activity android:name="app.yado.Activities.Task_Details" />
+        <activity
+            android:name="app.yado.Activities.Edit_Task"
+            android:label="@string/title_activity_edit__task" />
+        <activity android:name="app.yado.Activities.Create_Account_Phone_Verification" />
+        <activity android:name="app.yado.Activities.Create_Account_Phone_Verification_Code" />
+        <activity android:name="app.yado.Activities.Create_Account_User_Information" />
+        <activity android:name="app.yado.Activities.Create_Account_Complete" />
+        <activity android:name="app.yado.EditUserProfile" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ada01703438a216f36e4d017dfef23689938a07c" />
+
+    </application>
+
+</manifest>

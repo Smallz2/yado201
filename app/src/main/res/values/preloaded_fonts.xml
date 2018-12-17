@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/hind</item>
+        <item>@font/hind_medium</item>
+        <item>@font/noto_sans</item>
+        <item>@font/nunito</item>
+        <item>@font/nunito_bold</item>
+        <item>@font/nunito_light</item>
+        <item>@font/nunito_sans</item>
+        <item>@font/nunito_sans_semibold</item>
+        <item>@font/nunito_semibold</item>
+        <item>@font/open_sans_semibold</item>
+        <item>@font/rubik</item>
+        <item>@font/rubik_medium</item>
+        <item>@font/ubuntu</item>
+        <item>@font/ubuntu_bold</item>
+        <item>@font/ubuntu_light</item>
+        <item>@font/ubuntu_medium</item>
+    </array>
+</resources>

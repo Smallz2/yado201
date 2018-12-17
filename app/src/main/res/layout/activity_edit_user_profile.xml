@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.EditUserProfile"
+    android:orientation="vertical"
+    android:background="@color/almostWhite">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/colorWhite"
+        android:onClick="event_ChangeProfileImage">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/smalls"
+            android:id="@+id/id_user_photo"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Photo"
+            android:textColor="@color/purpleAccent"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_toRightOf="@id/id_user_photo"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/colorWhite"
+        android:onClick="event_clickUserName">
+
+        <TextView
+            android:id="@+id/id_user_Name_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_user_Name_Text"
+            android:textColor="@color/fontColorPrimary"
+            android:id="@+id/id_user_user_name_editText"
+            android:background="@null"
+            android:text="Name"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@color/colorWhite"
+        android:onClick="event_clickAbout">
+
+        <TextView
+            android:id="@+id/id_about_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About (Optional)"
+            android:textSize="10sp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:paddingRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_about_Text"
+            android:textColor="@color/fontColorPrimary"
+            android:id="@+id/id_user_about_editText"
+            android:background="@null"
+            android:lines="4"
+            android:inputType="textMultiLine"
+            android:hint="Tell people about yourself, this may increase your chances selected to do a task."/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/id_update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/material_button_enable"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:text="Update" />
+
+</LinearLayout>

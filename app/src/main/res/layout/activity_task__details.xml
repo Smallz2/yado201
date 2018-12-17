@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.Activities.Task_Details"
+    android:background="@color/colorWhite">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:id="@+id/id_taskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Need my car washed"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textColor="@color/fontColorPrimary"
+            android:textSize="18sp"
+            android:paddingStart="20dp" />
+
+        <LinearLayout
+            android:paddingLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$58"
+                    android:fontFamily="@font/nunito_sans"
+                    android:id="@+id/task_amountAwarded" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount Awarded"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textSize="12sp"
+                    android:textColor="@color/fontColorSecondary"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="40dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12 Oct, 2018"
+                    android:fontFamily="@font/nunito_sans"
+                    android:id="@+id/id_taskStartDate" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textSize="12sp"
+                    android:textColor="@color/fontColorSecondary"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7:30 PM"
+                    android:fontFamily="@font/nunito_sans"
+                    android:id="@+id/id_taskStartTime" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Time"
+                    android:fontFamily="@font/nunito_sans_semibold"
+                    android:textSize="12sp"
+                    android:textColor="@color/fontColorSecondary"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightFont" />
+
+        <RelativeLayout
+            android:id="@+id/id_authorProfileWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/smalls"
+                android:layout_centerVertical="true"
+                android:id="@+id/id_user_profile_img"/>
+
+            <TextView
+                android:id="@+id/id_user_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/id_user_profile_img"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Dexter Small"
+                android:textAlignment="center"
+                android:layout_toEndOf="@id/id_user_profile_img"
+                android:layout_marginStart="10dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightFont" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:textColor="@color/fontColorPrimary"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:id="@+id/id_taskLocation"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/fontColorSecondary"
+            android:paddingRight="30dp"
+            android:fontFamily="@font/nunito_sans"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp" />
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightFont" />
+
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nunito_sans_semibold"
+            android:textColor="@color/fontColorPrimary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingStart="20dp" />
+
+        <TextView
+            android:paddingLeft="20dp"
+            android:id="@+id/id_taskDescription"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="we actually got this source from unknown site who was selling this video and among many others for around 200 to 300 $bucks. pretty sad age for p2p.... you do not miss anything at all."
+            android:textColor="@color/fontColorSecondary"
+            android:paddingRight="30dp"
+            android:fontFamily="@font/nunito_sans"
+            android:paddingEnd="30dp"
+            android:paddingStart="20dp" />
+
+        <View
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/LightFont" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:id="@+id/id_applicantContainer"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp">
+
+            <TextView
+                android:id="@+id/id_applicantTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:text="Applicants"
+                android:textColor="@color/fontColorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/id_taskApplicantRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_applicantTitleText"
+                android:layout_marginTop="30dp"
+                tools:itemCount="3"
+                tools:listitem="@layout/recycler_view_item_1">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/id_taskApplyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Apply"
+        android:visibility="invisible"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/material_button_enable"/>
+</RelativeLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "779076553124",
+    "firebase_url": "https://yado201-224b0.firebaseio.com",
+    "project_id": "yado201-224b0",
+    "storage_bucket": "yado201-224b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779076553124:android:056aec52dea61143",
+        "android_client_info": {
+          "package_name": "app.yado"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779076553124-0v1uj5u0lg5njfi3egbnvi9vd9rgdbtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.yado",
+            "certificate_hash": "0aae36d921538dffc2ed4306e49e4ffa44a359ce"
+          }
+        },
+        {
+          "client_id": "779076553124-97c0pq4apb0uqdcti462rpofrm3ee250.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEJy5K69T0fJbDuhTFvKXBf63_nISYcao"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779076553124-97c0pq4apb0uqdcti462rpofrm3ee250.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

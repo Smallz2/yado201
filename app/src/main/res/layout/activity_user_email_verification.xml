@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.Activities.userEmailVerification">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="165dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_asset_9" />
+        
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#e4e4e4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Email Verification Required"
+                android:textColor="@color/fontColorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/rubik_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="An Email Has been sent to : "
+                android:textColor="@color/fontColorSecondary" />
+
+            <TextView
+                android:id="@+id/userEmailAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/fontColorSecondary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/hind" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:fontFamily="@font/hind"
+                android:text="Please Follow the instructions in the verification email to finish creating your Yado account."
+                android:textColor="@color/fontColorSecondary" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="88dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/material_button_disable"
+            android:padding="10dp"
+            android:text="Continue"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp" />
+
+        <Button
+            android:id="@+id/signOutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="88dp"
+            android:layout_toLeftOf="@id/continueButton"
+            android:background="@drawable/material_button_disable"
+            android:padding="10dp"
+            android:text="Sign out"
+            android:layout_marginRight="130dp"
+            android:textColor="@color/colorWhite"
+            android:layout_alignParentRight="true"
+             />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

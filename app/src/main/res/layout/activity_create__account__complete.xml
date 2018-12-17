@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.Activities.Create_Account_Phone_Verification">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/toolbar" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="165dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_asset_9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/my_toolbar"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:weightSum="1">
+
+            <!--<ImageView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight=".5"-->
+                <!--android:src="@drawable/done" />-->
+
+            <LinearLayout
+                android:id="@+id/id_top_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Now you are registered"
+                    android:textAlignment="center"
+                    android:textColor="@color/fontColorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/nunito"
+                    android:text="you can now enjoy all the features of yado"
+                    android:textAlignment="center"
+                    android:textColor="@color/LightFont" />
+
+                <TextView
+
+                    android:id="@+id/id_phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/LightFont" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_error_invalid_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:id="@+id/id_error_mark"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_error_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/id_error_mark"
+                    android:paddingStart="5dp"
+                    android:paddingLeft="10dp"
+                    android:text="Invalid number"
+                    android:textColor="@color/redColor"
+                    android:textSize="11sp" />
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/formContinueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/material_button_disable"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:shadowColor="#ffffff00"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

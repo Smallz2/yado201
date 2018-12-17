@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.Activities.Create_Task"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+    <!-- App Bar With Edit Text -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_TaskTitle"
+            android:background="@color/colorWhite"
+            android:hint="Task title"
+            android:textColor="@color/fontColorPrimary"
+            android:paddingBottom="20dp"
+            android:maxLength="40"
+            android:paddingLeft="50dp"
+            android:paddingTop="20dp"
+            android:textColorHint="@color/LightFont"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scroll View -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_weight="1"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:background="#f2f2f2"
+                android:orientation="vertical">
+
+                <!-- Error Message -->
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:id="@+id/id_descriptionErrorMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="45dp"
+                    android:orientation="horizontal"
+                    android:paddingStart="45dp">
+
+                    <!--<ImageView-->
+                    <!--android:layout_width="16dp"-->
+                    <!--android:layout_height="16dp"-->
+                    <!--android:src="@drawable/ic_error_black_24dp" />-->
+
+                    <!--<TextView-->
+                    <!--android:paddingLeft="5dp"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Description needs to be at least 5 words"-->
+                    <!--android:textColor="@color/redColor"-->
+                    <!--android:textSize="11sp"-->
+                    <!--android:paddingStart="5dp" />-->
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/id_taskDescriptionInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f2f2f2"
+                    android:hint="Provide any important details for your Doer. For example, what supplies are needed."
+                    android:paddingBottom="150dp"
+                    android:maxLength="1000"
+                    android:paddingLeft="50dp"
+                    android:inputType="textMultiLine"
+                    android:paddingTop="10dp"
+                    android:textColorHint="@color/LightFont"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <!-- Amount Awarded Card -->
+            <RelativeLayout
+                android:id="@+id/id_amountAwardedCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorWhite"
+                android:paddingBottom="30dp"
+                android:paddingEnd="30dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:paddingStart="50dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/id_headerInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Amount Awarded"
+                        android:textColor="@color/fontColorPrimary" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_monetization_on_black_24dp" />
+                </LinearLayout>
+
+                <!-- Error Message -->
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:id="@+id/id_priceErrorMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_headerInfo"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_error_black_24dp" />
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Price must be $10-2000"
+                        android:textColor="@color/redColor"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/id_amountAwardedInputWrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:hintEnabled="false"
+                    android:layout_below="@id/id_priceErrorMessage">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/id_amountAwardedInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:inputType="number"
+                        android:hint="$0"
+                        android:maxLength="5"
+                        android:textColorHint="@color/LightFont"
+                        android:backgroundTint="@color/LightFont"
+                        android:textColor="@color/LightFont"
+                        android:textSize="15dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!-- Start Date Card -->
+            <RelativeLayout
+                android:id="@+id/id_startDateCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorWhite"
+                android:paddingBottom="30dp"
+                android:paddingEnd="30dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:paddingStart="50dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/id_startDateHeaderInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Start Date"
+                        android:textColor="@color/fontColorPrimary"
+                        app:fontFamily="@font/rubik_medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_today_black_24dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/id_startDateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/id_startDateHeaderInfo"
+                    android:background="@color/colorWhite"
+                    android:hint="7 June, 2018"
+                    android:textColorHint="@color/LightFont"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <!-- Due Date Card -->
+            <RelativeLayout
+                android:id="@+id/id_startTimeCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorWhite"
+                android:paddingBottom="30dp"
+                android:paddingEnd="30dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:paddingStart="50dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/id_dueDateHeaderInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Start Time"
+                        android:textColor="@color/fontColorPrimary"
+                        app:fontFamily="@font/rubik_medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:src="@drawable/ic_alarm_black_24dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/id_startTimeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/id_dueDateHeaderInfo"
+                    android:background="@color/colorWhite"
+                    android:hint="1:15 PM"
+                    android:textColorHint="@color/LightFont"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <!-- Location Card -->
+            <RelativeLayout
+                android:id="@+id/id_locationCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/colorWhite"
+                android:paddingBottom="30dp"
+                android:paddingEnd="30dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="30dp"
+                android:paddingStart="50dp"
+                android:paddingTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/id_locationHeaderInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Location"
+                        android:textColor="@color/fontColorPrimary"
+                        app:fontFamily="@font/rubik_medium" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".1"
+                        android:src="@drawable/calender" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/id_locationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/id_locationHeaderInfo"
+                    android:background="@color/colorWhite"
+                    android:hint="Brades Rd"
+                    android:textColorHint="@color/LightFont"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/id_createTaskButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/material_button_enable"
+                android:padding="20dp"
+                android:text="Update"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

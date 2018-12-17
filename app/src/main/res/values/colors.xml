@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4285F4</color>
+    <color name="colorPrimaryDark">#232f34</color>
+    <color name="colorAccent">#20c675</color>
+    <color name="fontColorPrimary">#232f34</color>
+    <color name="fontColorSecondary">#4a6572</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="LightColor">#757575</color>
+    <color name="BluishColor">#0bc5b8</color>a
+    <color name="redColor">#ff563f</color>
+    <color name="indicator_unselected">#232f34</color>
+    <color name="LightFont">#d4d4d4</color>
+    <color name="almostWhite">#fafafa</color>
+    <color name="purpleAccent">#7965ff</color>
+
+</resources>

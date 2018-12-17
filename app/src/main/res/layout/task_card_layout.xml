@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorWhite"
+    android:id="@+id/id_cardView"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical"
+    android:elevation="0dp"
+    app:contentPadding="20dp">
+
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/id_taskAuthorImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/id_taskAuthorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@id/id_taskAuthorImg"
+                android:layout_toRightOf="@id/id_taskAuthorImg"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Dexter Small"
+                android:textColor="@color/fontColorPrimary"
+                android:textSize="15sp"
+                app:fontFamily="@font/nunito_sans_semibold" />
+
+            <ImageView
+                android:id="@+id/id_taskTimePostImg"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_below="@+id/id_amountAwarded"
+                android:layout_alignLeft="@+id/id_taskAuthorName"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="-1dp"
+                android:src="@drawable/ic_bxs_alarm" />
+
+            <TextView
+                android:id="@+id/id_taskTimePost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_amountAwarded"
+                android:layout_alignStart="@+id/id_taskTimePostImg"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="-2dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:text="10 mins"
+                android:textColor="@color/LightColor"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:fontFamily="@font/nunito_sans_semibold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@id/id_amountAwarded"
+                android:layout_toLeftOf="@id/id_amountAwarded"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingTop="2dp"
+                android:text="$"
+                android:textColor="@color/fontColorSecondary"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/id_amountAwarded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/nunito_semibold"
+                android:paddingStart="2dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="2dp"
+                android:paddingBottom="3dp"
+                android:text="30.00"
+                android:textColor="@color/fontColorPrimary"
+                android:textSize="14sp"
+                app:fontFamily="@font/nunito_sans_semibold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/id_taskTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/hind_medium"
+            android:text="Need my yard cut"
+            android:textColor="@color/fontColorPrimary"
+            android:textSize="16sp"
+            app:fontFamily="@font/nunito_sans_semibold" />
+
+        <TextView
+            android:id="@+id/id_taskDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:fontFamily="@font/nunito"
+            android:paddingRight="30dp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat, libero ut laoreet malesuada, ante velit fermentum risus"
+            android:textColor="@color/fontColorSecondary"
+            android:textSize="12sp"
+            app:fontFamily="@font/noto_sans" />
+
+
+        <LinearLayout
+            android:id="@+id/moreTaskInformationWrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id_location_id"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/location"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/id_taskLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/id_location_id"
+                    android:layout_toRightOf="@id/id_location_id"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingLeft="5dp"
+                    android:text="Cujoe Head Road"
+                    android:textColor="@color/fontColorSecondary"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/nunito_sans_semibold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_taskStartDateWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/id_timeIcon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/calender"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/id_taskStartDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/id_timeIcon"
+                    android:layout_toRightOf="@id/id_timeIcon"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingLeft="5dp"
+                    android:text="2, Apr"
+                    android:textColor="@color/fontColorSecondary"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/nunito_sans_semibold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_startTimeWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/time_icon"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_alarm_black_24dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:id="@+id/id_startTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/time_icon"
+                    android:layout_toRightOf="@id/time_icon"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:paddingLeft="5dp"
+                    android:text="6:20 AM"
+                    android:textColor="@color/fontColorSecondary"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/nunito_sans_semibold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

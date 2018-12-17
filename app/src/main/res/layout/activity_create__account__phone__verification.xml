@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.Activities.Create_Account_Phone_Verification">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/toolbar"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="165dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_asset_9" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/my_toolbar"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/id_top_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/nunito_semibold"
+                    android:text="Phone Number Verification"
+                    android:textColor="@color/fontColorPrimary"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Enter your mobile number, we will send you a code."
+                    android:textColor="@color/LightFont"
+                    android:fontFamily="@font/nunito" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/user_enter_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/id_mni_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/id_mni_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="MNI" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_mni_text"
+                        android:background="@drawable/phone_input_box"
+                        android:fontFamily="@font/hind"
+                        android:text="+(664)"
+                        android:textColor="@color/fontColorPrimary"
+                        android:editable="false"
+                        android:padding="14dp"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_marginTop="50dp"
+                        android:id="@+id/id_user_phone_number_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="14dp"
+                        android:text="Your Number" />
+
+                    <EditText
+                        android:id="@+id/id_phone_number_input"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/id_user_phone_number_text"
+                        android:background="@drawable/phone_input_box"
+                        android:fontFamily="@font/hind"
+                        android:hint="496-0000"
+                        android:inputType="phone"
+                        android:textColor="@color/fontColorPrimary"
+                        android:maxLength="7"
+                        android:padding="14dp"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_error_invalid_number"
+                android:visibility="invisible"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/id_error_mark"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_error_black_24dp" />
+
+                <TextView
+                    android:layout_toRightOf="@id/id_error_mark"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invalid number"
+                    android:textColor="@color/redColor"
+                    android:textSize="11sp"
+                    android:paddingStart="5dp" />
+            </RelativeLayout>
+
+
+
+            <Button
+                android:id="@+id/formContinueBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/material_button_disable"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:shadowColor="#ffffff00"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

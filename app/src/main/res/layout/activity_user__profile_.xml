@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="app.yado.Activities.User_Profile_Activity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+
+                <TextView
+                    android:id="@+id/id_profileEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:fontFamily="@font/hind_medium"
+                    android:text="Edit profile"
+                    android:textColor="@color/purpleAccent" />
+
+                <ImageView
+                    android:id="@+id/id_userImg"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/smalls"
+                    android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/id_userImg"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/id_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Dexter Small"
+                        android:textColor="@color/fontColorPrimary"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/id_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="email@gmail.com" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/id_confirmText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="Confirmed:"
+                            android:textColor="@color/purpleAccent" />
+
+
+                        <ImageView
+                            android:id="@+id/id_email_confirm"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/id_confirmText"
+                            android:src="@drawable/email"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/id_phone_confirm"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/id_email_confirm"
+                            android:src="@drawable/phone"
+                            android:visibility="invisible" />
+
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/id_confirm_accounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/id_email_confirm"
+                        android:background="@drawable/purple_btn_stroke"
+                        android:text="Confirm"
+                        android:textAllCaps="false"
+                        android:textColor="@color/purpleAccent"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/LightFont" />
+
+            <LinearLayout
+                android:id="@+id/id_aboutUserWrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/hind_medium"
+                    android:text="About"
+                    android:textColor="@color/fontColorPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/id_aboutUserText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit purus eu aliquam vulputate. Mauris at velit mollis" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/bottom_nav" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

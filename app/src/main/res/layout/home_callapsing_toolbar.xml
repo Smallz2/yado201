@@ -1,0 +1,135 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/home_collapsing_toolbar">
+
+    <!-- Scrollable view here -->
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="top"
+            android:background="@drawable/home_toolbar_bg"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <!-- Tool Bar -->
+            <androidx.appcompat.widget.Toolbar
+                android:paddingTop="30dp"
+                android:paddingBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:layout_collapseMode="pin">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/id_home_toolbar"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp">
+
+                    <!-- User + Greeting -->
+                    <RelativeLayout
+                    android:id="@+id/id_top_content_wrapper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:paddingLeft="10dp">
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/smalls"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/id_user_profile_img"/>
+
+                    <TextView
+                        android:id="@+id/id_user_greeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/id_user_profile_img"
+                        android:paddingLeft="20dp"
+                        android:text="Good Morning,"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nunito_semibold" />
+
+                    <TextView
+                        android:id="@+id/id_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_user_greeting"
+                        android:layout_toRightOf="@id/id_user_profile_img"
+                        android:paddingLeft="20dp"
+                        android:text="John Oliver"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/nunito_semibold" />
+                </RelativeLayout>
+
+                    <!-- Date + Weather -->
+                    <RelativeLayout
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/id_current_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily=""
+                            android:text="Sept, 25th"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/nunito_semibold" />
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/id_current_date"
+                            android:paddingLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/id_current_weather" />
+                    </RelativeLayout>
+
+                    <!-- Search Bar -->
+                    <RelativeLayout
+                        android:layout_below="@id/id_top_content_wrapper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:padding="15dp"
+                        android:background="@drawable/search_box">
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:id="@+id/id_search_icon"
+                            android:tint="@color/colorWhite"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/search"/>
+
+                        <TextView
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Search for a task....."
+                            android:fontFamily="@font/nunito_semibold"
+                            android:layout_toRightOf="@id/id_search_icon"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

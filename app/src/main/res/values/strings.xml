@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Yado201</string>
+    <string name="facebook_app_id">166899834130843</string>
+    <string name="fb_login_protocol_scheme">fb166899834130843</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_registration">Registration</string>
+    <string name="title_activity_user_email_verification">userEmailVerification</string>
+    <string name="title_activity_on__boarding__page_">On_Boarding_Page_Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_create__task">Create_Task</string>
+    <string name="google_maps_API_key">AIzaSyAlxH9Vntsdy0NPQQXcCeS1AVGagLnPEf0</string>
+    <string name="title_activity_edit__task">Edit_Task</string>
+    <string name="agree_terms_privacy">By continuing, you agree to our <a href="http://link1/terms">Terms of Use</a> and read the <a href="http://link1/privacy">Privacy Policy</a></string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="msg_token_fmt" />
+</resources>
